@@ -1,0 +1,7 @@
+<h1>Fullstack Automation Success!</h1>
+<p id="msg">Connecting to Backend...</p>
+<script>
+  fetch('http://[EC2-IP]:5000/api/status')
+    .then(res => res.json())
+    .then(data => document.getElementById('msg').innerText = data.message);
+</script>
